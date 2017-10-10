@@ -1,0 +1,37 @@
+DEFS=-D_GNU_SOURCE -DPP_DATATS=$(PP_DATATS)
+CFLAGS_USER=
+LDFLAGS_USER=
+CFLAGS_O:=$(CFLAGS_O) -O3
+CFLAGS_O:=$(CFLAGS_O) -ffunction-sections -fdata-sections -funroll-loops
+CFLAGS_O:=$(CFLAGS_O) -fomit-frame-pointer
+CFLAGS_O:=$(CFLAGS_O) -march=native
+CFLAGS_STD=-std=c11
+CFLAGS=$(CFLAGS_O) -Werror -Wall -Wshadow -Wmissing-prototypes\
+	$(CFLAGS_STD) -pedantic \
+	$(CFLAGS_USER)
+PREFIX=/usr/local
+
+LDFLAGS=$(LDFLAGS_USER) $(LDFLAGS_CONFIG) -Wl,--gc-sections
+DEFS=-D_GNU_SOURCE -DPP_DATATS=$(PP_DATATS) $(DEFS_CONFIG)
+OBJ=$(OBJ_CONFIG) pp_data.o pp_scan.o pp_str.o pp_time.o pp_main.o
+PP_H=pp_config.h pp_debug.h pp_macros.h
+
+.SUFFIXES: .o .c
+.c.o: ; $(CC) $(DEFS) $(CFLAGS) -c $<
+
+all: pp
+
+pp: $(OBJ)
+	$(CC) $(LDFLAGS) $(OBJ) -o pp
+	size pp
+	wc -c pp
+
+install:
+	cp pp $(PREFIX)/bin/
+
+uninstall:
+	rm -f $(PREFIX)/bin/pp
+
+clean:
+	rm -rfv pp *.o
+

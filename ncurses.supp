@@ -1,0 +1,480 @@
+{
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:_nc_setupscreen
+   fun:newterm
+   fun:initscr
+   fun:_ui_init
+   fun:main
+}
+{
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:strdup
+   obj:/lib/x86_64-linux-gnu/libtinfo.so.5.9
+   fun:_nc_first_db
+   fun:_nc_read_entry
+   fun:_nc_setup_tinfo
+   fun:_nc_setupterm
+   fun:newterm
+   fun:initscr
+   fun:_ui_init
+   fun:main
+}
+{
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:strdup
+   fun:_nc_setupterm
+   fun:newterm
+   fun:initscr
+   fun:_ui_init
+   fun:main
+}
+{
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_nc_tparm_analyze
+   fun:tparm
+   fun:_nc_mvcur_init
+   fun:newterm
+   fun:initscr
+   fun:_ui_init
+   fun:main
+}
+{
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_nc_home_terminfo
+   fun:_nc_first_db
+   fun:_nc_read_entry
+   fun:_nc_setup_tinfo
+   fun:_nc_setupterm
+   fun:newterm
+   fun:initscr
+   fun:_ui_init
+   fun:main
+}
+{
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:realloc
+   fun:_nc_doalloc
+   fun:_nc_read_termtype
+   obj:/lib/x86_64-linux-gnu/libtinfo.so.5.9
+   fun:_nc_read_entry
+   fun:_nc_setup_tinfo
+   fun:_nc_setupterm
+   fun:newterm
+   fun:initscr
+   fun:_ui_init
+   fun:main
+}
+{
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:_nc_first_db
+   fun:_nc_read_entry
+   fun:_nc_setup_tinfo
+   fun:_nc_setupterm
+   fun:newterm
+   fun:initscr
+   fun:_ui_init
+   fun:main
+}
+{
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:realloc
+   fun:_nc_doalloc
+   fun:tparm
+   fun:_nc_mvcur_init
+   fun:newterm
+   fun:initscr
+   fun:_ui_init
+   fun:main
+}
+{
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:realloc
+   fun:_nc_doalloc
+   fun:_nc_read_termtype
+   obj:/lib/x86_64-linux-gnu/libtinfo.so.5.9
+   fun:_nc_read_entry
+   fun:_nc_setup_tinfo
+   fun:_nc_setupterm
+   fun:newterm
+   fun:initscr
+   fun:_ui_init
+   fun:main
+}
+{
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_nc_first_db
+   fun:_nc_read_entry
+   fun:_nc_setup_tinfo
+   fun:_nc_setupterm
+   fun:newterm
+   fun:initscr
+   fun:_ui_init
+   fun:main
+}
+{
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:_nc_makenew
+   fun:newwin
+   fun:_nc_setupscreen
+   fun:newterm
+   fun:initscr
+   fun:_ui_init
+   fun:main
+}
+{
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:_nc_makenew
+   fun:newwin
+   fun:_nc_setupscreen
+   fun:newterm
+   fun:initscr
+   fun:_ui_init
+   fun:main
+}
+{
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:_nc_makenew
+   fun:newwin
+   fun:_nc_setupscreen
+   fun:newterm
+   fun:initscr
+   fun:_ui_init
+   fun:main
+}
+{
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:_nc_setupscreen
+   fun:newterm
+   fun:initscr
+   fun:_ui_init
+   fun:main
+}
+{
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_nc_scroll_optimize
+   fun:doupdate
+   fun:wrefresh
+   fun:_nc_wgetch
+   fun:wgetch
+   fun:_get_key
+   fun:_ui
+   fun:main
+}
+{
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_nc_read_termtype
+   obj:/lib/x86_64-linux-gnu/libtinfo.so.5.9
+   fun:_nc_read_entry
+   fun:_nc_setup_tinfo
+   fun:_nc_setupterm
+   fun:newterm
+   fun:initscr
+   fun:_ui_init
+   fun:main
+}
+{
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:_nc_setupterm
+   fun:newterm
+   fun:initscr
+   fun:_ui_init
+   fun:main
+}
+{
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:_nc_read_termtype
+   obj:/lib/x86_64-linux-gnu/libtinfo.so.5.9
+   fun:_nc_read_entry
+   fun:_nc_setup_tinfo
+   fun:_nc_setupterm
+   fun:newterm
+   fun:initscr
+   fun:_ui_init
+   fun:main
+}
+{
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:_nc_hash_map
+   fun:_nc_scroll_optimize
+   fun:doupdate
+   fun:wrefresh
+   fun:_nc_wgetch
+   fun:wgetch
+   fun:_get_key
+   fun:_ui
+   fun:main
+}
+{
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:_nc_hash_map
+   fun:_nc_scroll_optimize
+   fun:doupdate
+   fun:wrefresh
+   fun:_nc_wgetch
+   fun:wgetch
+   fun:_get_key
+   fun:_ui
+   fun:main
+}
+{
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:_nc_makenew
+   fun:newwin
+   fun:_nc_setupscreen
+   fun:newterm
+   fun:initscr
+   fun:_ui_init
+   fun:main
+}
+{
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:_nc_makenew
+   fun:newwin
+   fun:_nc_setupscreen
+   fun:newterm
+   fun:initscr
+   fun:_ui_init
+   fun:main
+}
+{
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:_nc_makenew
+   fun:newwin
+   fun:_nc_setupscreen
+   fun:newterm
+   fun:initscr
+   fun:_ui_init
+   fun:main
+}
+{
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_nc_read_termtype
+   obj:/lib/x86_64-linux-gnu/libtinfo.so.5.9
+   fun:_nc_read_entry
+   fun:_nc_setup_tinfo
+   fun:_nc_setupterm
+   fun:newterm
+   fun:initscr
+   fun:_ui_init
+   fun:main
+}
+{
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:_nc_setupscreen
+   fun:newterm
+   fun:initscr
+   fun:_ui_init
+   fun:main
+}
+{
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:_nc_setupscreen
+   fun:newterm
+   fun:initscr
+   fun:_ui_init
+   fun:main
+}
+{
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_nc_hash_map
+   fun:_nc_scroll_optimize
+   fun:doupdate
+   fun:wrefresh
+   fun:_nc_wgetch
+   fun:wgetch
+   fun:_get_key
+   fun:_ui
+   fun:main
+}
+{
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_nc_printf_string
+   fun:vwprintw
+   fun:mvprintw
+   fun:_ui_draw
+   fun:_do_scan
+   fun:_init_scan
+   fun:main
+}
+{
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:realloc
+   fun:_nc_doalloc
+   fun:_nc_read_termtype
+   obj:/lib/x86_64-linux-gnu/libtinfo.so.5.9
+   fun:_nc_read_entry
+   fun:_nc_setup_tinfo
+   fun:_nc_setupterm
+   fun:newterm
+   fun:initscr
+   fun:_ui_init
+   fun:main
+}
+{
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_nc_setupscreen
+   fun:newterm
+   fun:initscr
+   fun:_ui_init
+   fun:main
+}
+{
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:newwin
+   fun:_nc_setupscreen
+   fun:newterm
+   fun:initscr
+   fun:_ui_init
+   fun:main
+}
+{
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:newwin
+   fun:_nc_setupscreen
+   fun:newterm
+   fun:initscr
+   fun:_ui_init
+   fun:main
+}
+{
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:newwin
+   fun:_nc_setupscreen
+   fun:newterm
+   fun:initscr
+   fun:_ui_init
+   fun:main
+}
+{
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_nc_scroll_optimize
+   fun:doupdate
+   fun:wrefresh
+   fun:_nc_wgetch
+   fun:wgetch
+   fun:_get_key
+   fun:_ui_poll
+   fun:_add_scan
+   fun:pp_scan
+   fun:_do_scan
+   fun:_init_scan
+   fun:main
+}
+{
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:_nc_hash_map
+   fun:_nc_scroll_optimize
+   fun:doupdate
+   fun:wrefresh
+   fun:_nc_wgetch
+   fun:wgetch
+   fun:_get_key
+   fun:_ui_poll
+   fun:_add_scan
+   fun:pp_scan
+   fun:_do_scan
+   fun:_init_scan
+   fun:main
+}
+{
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:_nc_hash_map
+   fun:_nc_scroll_optimize
+   fun:doupdate
+   fun:wrefresh
+   fun:_nc_wgetch
+   fun:wgetch
+   fun:_get_key
+   fun:_ui_poll
+   fun:_add_scan
+   fun:pp_scan
+   fun:_do_scan
+   fun:_init_scan
+   fun:main
+}
+{
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_nc_hash_map
+   fun:_nc_scroll_optimize
+   fun:doupdate
+   fun:wrefresh
+   fun:_nc_wgetch
+   fun:wgetch
+   fun:_get_key
+   fun:_ui_poll
+   fun:_add_scan
+   fun:pp_scan
+   fun:_do_scan
+   fun:_init_scan
+   fun:main
+}

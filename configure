@@ -1,0 +1,13 @@
+#!/bin/sh
+set -eu
+cd $(dirname $0)
+exec 3>&1
+exec > Makefile
+echo PP_DATATS=$(date +'%s')
+echo LDFLAGS_CONFIG=$(cc -E -P -DMAKEFILE_LDFLAGS pp_config.h)
+echo DEFS_CONFIG=$(cc -E -P -DMAKEFILE_DEFS pp_config.h)
+echo OBJ_CONFIG=$(cc -E -P -DMAKEFILE_OBJ pp_config.h)
+cat Makefile.in
+grep '".*\.h"' -oH *.c | tr -d '"' | sed 's/\.c/\.o/'
+exec >&3
+echo Makefile written

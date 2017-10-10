@@ -1,0 +1,13 @@
+*.log
+*.o
+*.core
+*.log.core.*
+*.tmp
+callgrind.out
+trace
+Makefile
+pp
+misc/px_test2
+misc/px_test
+misc/dist_test
+misc/init_test
