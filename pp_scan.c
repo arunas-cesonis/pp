@@ -29,13 +29,13 @@ void pp_scan(char *path, int (*filter)(char*), int (*add)(char*, int)) {
 	while (fgets(buf, BUF_SZ, f)) {
 		len = strlen(buf);
 		buf[--len] = 0;
+		if (!filter(buf)) continue;
 		if (add(buf, len)) break;
 	}
 	pclose(f);
 }
 
 #else /* ENABLE_PP_SCAN_FIND */
-
 #define STACK_SZ 16384
 
 void pp_scan(char *path, int (*filter)(char*), int (*add)(char*, int)) {

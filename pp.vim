@@ -1,5 +1,6 @@
 let g:pp='/usr/local/bin/pp'
-map p :Callpp 
+map \p :Callpp 
+map \t :CallppTab 
 fu! _pp()
 	let shellredir=&shellredir
 	set shellredir=2>%s
@@ -8,3 +9,4 @@ fu! _pp()
 	return a
 endf
 command! Callpp exe 'e ' . _pp()
+command! CallppTab exe 'tabnew ' . _pp()
