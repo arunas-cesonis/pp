@@ -1,20 +1,20 @@
 #ifndef PP_CONFIG_H
 #define PP_CONFIG_H
 
-#define ENABLE_STATS
+// FIXME: PX_STATS is broken thus ENABLE_STATS is also
+
+// #define ENABLE_STATS
 #define ENABLE_DATATS
 // #define ENABLE_TREE
 #define ENABLE_J_ZERO
 #define ENABLE_PX
 #define ENABLE_PP_SCAN_FIND
 
-#ifdef MAKEFILE_DEFS
 #if defined(ENABLE_STATS) && defined(ENABLE_PX)
-#define PX_STATS
+// #define PX_STATS
 // -DPX_STATS
 #endif
 // -DPX_NORECT
-#endif
 
 #ifdef MAKEFILE_OBJ
 #ifdef ENABLE_TREE

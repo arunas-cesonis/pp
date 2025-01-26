@@ -60,7 +60,7 @@ static size_t out_sz = 0;
 static char *out_buf = 0;
 static bool out_clr = false;
 
-void px_init() {
+void px_init(void) {
 	struct termios traw;
 
 	px_cy = 0;
@@ -216,7 +216,7 @@ void px_rect(ui16 h, ui16 w, char c) {
 }
 #endif /* PX_NORECT */
 
-void px_flush() {
+void px_flush(void) {
 	char *p;
 	char c0;
 	char c;
@@ -311,7 +311,7 @@ void px_flush() {
 	);
 }
 
-void px_winsz() {
+void px_winsz(void) {
 	ioctl(PP_STDOUT, TIOCGWINSZ, &winsz);
 
 	if (px_out_h != winsz.ws_row || px_out_w != winsz.ws_col) {
@@ -320,7 +320,7 @@ void px_winsz() {
 	}
 }
 
-void px_clear() {
+void px_clear(void) {
 	memset(out, ' ', px_out_h * px_out_w);
 }
 
@@ -341,7 +341,7 @@ void px_out_resize(ui16 h, ui16 w) {
 	memset(out0, 0, px_out_h * px_out_w);
 }
 
-void px_read_in() {
+void px_read_in(void) {
 	ssize_t nread;
 	int avail;
 	in_buf_end = in_buf;
@@ -358,7 +358,7 @@ void px_read_in() {
 	}
 }
 
-ui8 px_get_key() {
+ui8 px_get_key(void) {
 	if (in_buf_p == in_buf_end) px_read_in();
 	if (in_buf_p < in_buf_end) {
 		return *in_buf_p++;
@@ -367,7 +367,7 @@ ui8 px_get_key() {
 	}
 }
 
-void px_cleanup() {
+void px_cleanup(void) {
 	if (out) {
 		free(out);
 		out = 0;

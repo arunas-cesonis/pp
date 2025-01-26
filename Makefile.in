@@ -11,7 +11,7 @@ CFLAGS=$(CFLAGS_O) -Werror -Wall -Wshadow -Wmissing-prototypes\
 	$(CFLAGS_USER)
 PREFIX=/usr/local
 
-LDFLAGS=$(LDFLAGS_USER) $(LDFLAGS_CONFIG) -Wl,--gc-sections
+LDFLAGS=$(LDFLAGS_USER) $(LDFLAGS_CONFIG)
 DEFS=-D_GNU_SOURCE -DPP_DATATS=$(PP_DATATS) $(DEFS_CONFIG)
 OBJ=$(OBJ_CONFIG) pp_data.o pp_scan.o pp_str.o pp_time.o pp_main.o
 PP_H=pp_config.h pp_debug.h pp_macros.h

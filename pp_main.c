@@ -180,7 +180,7 @@ int _add_scan(char *path, int len) {
 	return 0;
 }
 
-void _do_scan() {
+void _do_scan(void) {
 #ifdef ENABLE_STATS
 	pp_clock_t clk;
 #endif /* ENABLE_STATS */
@@ -200,13 +200,13 @@ void _do_scan() {
 	}
 }
 
-uint32_t _now() {
+uint32_t _now(void) {
 	struct timeval tv;
 	gettimeofday(&tv, 0);
 	return tv.tv_sec;
 }
 
-void _exec_prep() {
+void _exec_prep(void) {
 	TRACE("_exec_prep\n")
 	
 #ifdef ENABLE_J_ZERO
@@ -233,7 +233,7 @@ void _exec_prep() {
 
 }
 
-void _cleanup() {
+void _cleanup(void) {
 	TERM_CLOSE();
 	if (data) {
 		pp_data_close(data);
@@ -280,7 +280,7 @@ void pp_insert_match(pp_m_t* match) {
 	m[j] = *match;
 }
 
-void pp_find_matches2() {
+void pp_find_matches2(void) {
 	pp_rec_t *p;
 	pp_rec_t *end;
 	pp_m_t match;
@@ -334,7 +334,7 @@ int pp_insert_match_tree(pp_node *c, int cd, int d) {
 	return d;
 }
 
-void pp_find_matches_tree() {
+void pp_find_matches_tree(void) {
 #ifdef ENABLE_STATS
 	pp_clock_t clk;
 	pp_clock_start(&clk);
@@ -352,7 +352,7 @@ void pp_find_matches_tree() {
 }
 #endif /* ENABLE_TREE */
 
-void _get_key() {
+void _get_key(void) {
 	int ch;
 	cmd = CMD_NOOP;
 	ch = TERM_GET_KEY();
@@ -416,7 +416,7 @@ void _get_key() {
 }
 
 #ifdef ENABLE_STATS
-void _ui_draw_stats() {
+void _ui_draw_stats(void) {
 	int n;
 	char out[MAX_W];
 	int y = ui_h - 15;
@@ -450,7 +450,7 @@ void _ui_draw_stats() {
 }
 #endif /* ENABLE_STATS */
 
-void _ui_draw() {
+void _ui_draw(void) {
 	int count;
 	int y;
 	int n;
@@ -513,12 +513,12 @@ void _ui_draw() {
 	TERM_FLUSH();
 }
 
-void _clamp_sel() {
+void _clamp_sel(void) {
 	if (sel < 0) sel = 0;
 	else if (sel >= mlen) sel = mlen - 1;
 }
 
-void _do_exec() {
+void _do_exec(void) {
 	TRACE("_do_exec choice=\"%s\"\n", choice)
 	if (*choice == '\0') return;
 
@@ -553,7 +553,7 @@ void _do_exec() {
 }
 
 
-void _do_cmd() {
+void _do_cmd(void) {
 
 	switch (cmd) {
 
@@ -608,7 +608,7 @@ void _do_cmd() {
 	TRACE("sel=%d mlen=%d\n", sel, mlen)
 }
 
-void _ui_poll() {
+void _ui_poll(void) {
 	_get_key();
 	if (cmd != CMD_TIMEOUT) {
 		_do_cmd();
@@ -623,7 +623,7 @@ void _ui_poll() {
 	}
 }
 
-void _ui() {
+void _ui(void) {
 	while (ui_loop) {
 #ifdef ENABLE_TREE
 		pp_find_matches_tree();
@@ -652,7 +652,7 @@ void _mk_data_file(char *data_file, int max) {
 	}
 }
 
-void _init_data() {
+void _init_data(void) {
 	char data_file[PATH_MAX];
 	char path_idx[PATH_MAX];
 	char path_str[PATH_MAX];
@@ -685,14 +685,14 @@ void _init_data() {
 }
 
 #ifdef ENABLE_TREE
-void _init_tree() {
+void _init_tree(void) {
 	char *s = malloc(sizeof(char));
 	*s = 0;
 	tree = pp_tree_alloc(s, 0, 0);
 }
 #endif /* ENABLE_TREE */
 
-void _init_vars() {
+void _init_vars(void) {
 
 	data = 0;
 #ifdef ENABLE_TREE
@@ -724,7 +724,7 @@ void _init_vars() {
 	mbase = 1;
 }
 
-void _init_scan() {
+void _init_scan(void) {
 	if (!data->idx->len) {
 		TRACE("_init_scan\n")
 		_do_scan();
@@ -738,7 +738,7 @@ void _init_scan() {
 "Usage: pp [-2]\n"\
 "   -2  output selected path to stderr\n"
 
-void _usage() {
+void _usage(void) {
 	write(STDERR_FILENO, USAGE, sizeof(USAGE));
 }
 
@@ -761,7 +761,7 @@ void _init_opts(int argc, char **argv) {
 	}
 }
 
-void _ui_init() {
+void _ui_init(void) {
 	TERM_INIT();
 	ui_h = TERM_H();
 	ui_w = TERM_W();
